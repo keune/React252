@@ -7,7 +7,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f6f6f6',
-    paddingTop: StatusBar.height ? StatusBar.height : 20
+    paddingTop: StatusBar.currentHeight ? StatusBar.currentHeight : 20
   },
   input: {
     height: 50,

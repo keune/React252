@@ -7,11 +7,12 @@ import {
 
 import styles from './styles';
 
-export default ({animationType = 'fade', visible = false, onTouchOutside, containerStyles = {}, children}) => {
+export default ({animationType = 'fade', visible = false, onTouchOutside, containerStyles = {}, children, onRequestClose = () => null}) => {
   return (
     <Modal
       animationType={animationType}
       transparent={true}
+      onRequestClose={onRequestClose}
       visible={visible}>
 
       <TouchableWithoutFeedback
