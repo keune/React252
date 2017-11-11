@@ -5,7 +5,7 @@ import {
 export default StyleSheet.create({
   container: {
     width: 260, 
-    height: 320, 
+    height: 330, 
     backgroundColor:'#fff',
     borderRadius: 4
   },
@@ -14,7 +14,7 @@ export default StyleSheet.create({
     fontSize: 16,
     color: '#333',
     paddingHorizontal: 16,
-    paddingVertical: 12, 
+    paddingVertical: 14, 
     //backgroundColor: '#eee'
     backgroundColor: 'transparent'
   }

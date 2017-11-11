@@ -1,13 +1,13 @@
 import {
   StyleSheet,
-  StatusBar
+  Platform
 } from 'react-native';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f6f6f6',
-    paddingTop: StatusBar.currentHeight ? StatusBar.currentHeight : 20
+    paddingTop: Platform.OS === 'ios' ? 20 : 0
   },
   input: {
     height: 50,
