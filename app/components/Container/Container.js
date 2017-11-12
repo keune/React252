@@ -8,7 +8,8 @@ import {
   TextInput,
   TouchableHighlight,
   ScrollView,
-  StatusBar
+  StatusBar,
+  Keyboard
 } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -34,9 +35,9 @@ class Container extends Component {
 
   _fetchImg = () => {
     this.props.dispatch(fetchImage());
+    Keyboard.dismiss();
     let hatCode = this.props.hatCode;
-    let url =
-      'https://ahmetkun.com/iett/?h=' + hatCode + '&t=' + new Date().getTime();
+    let url = `https://ahmetkun.com/iett/?h=${hatCode}&t=${new Date().getTime()}`;
     fetch(url)
       .then(response => {
         return response.text();
